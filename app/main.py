@@ -87,7 +87,7 @@ def clean_line(line: str) -> str:
     line = re.sub(r"^[0-9-]+\s+", "", line)
     line = re.sub(r"oOo\s*", "", line, flags=re.I)
     line = re.sub(r"\s+", " ", line).strip()
-    line = re.sub(r"\s+([0-9]+|[A-Za-z"'\\/%-]+)\s*$", "", line)
+    line = re.sub(r"\s+([0-9]+|[A-Za-z\"'\\/%-]+)\s*$", "", line)
     return line.strip(" |\/:;"'`{}[]()")
 
 def parse_items(lines: List[str]) -> List[Tuple[str,str]]:
